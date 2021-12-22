@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center-div">
+      <canvas id="canvas">
+        Your browser does not support the HTML5 Canvas element
+      </canvas>
+      <button
+        onclick="toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', (dataUrl) => { 
+          console.log(dataUrl);
+          base64img = dataUrl;
+          image.src = base64img;
+          setupImage();
+          })"
+      >
+        to base64
+      </button>
+    </div>
+    <script src="base64.js"></script>
+    <script src="Particle.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>
